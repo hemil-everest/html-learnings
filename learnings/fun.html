@@ -1,0 +1,191 @@
+<!-- html is parent to 2 head and body, head is for storing information we don't have to display while body is for displaying things
+ head has meta informations, viewport(responsive for majority of devices with respect to pixels and other things -> responsiveness), 
+ HTml IS NOT case sensitive, <hr> for differentiating things
+ <p>H<sub>2</sub>O
+  <p>H<sup>2</sub>O
+    Tags - Semantic tags(Easily readable) - <header>, <footer>, <nav>, <section>, <article>, <aside>, <main>
+      Non semantic tags - <div>, <span> (For ranking and SEO)
+        Section - <section> - for grouping things (Experience, Education, Projects)
+
+  -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>My Portfolio website</title>
+  </head>
+  
+  <body>
+      <header>
+          <h1> My portfolio website</h1>
+      </header>
+      <!-- main, section, footer -->
+      <main>
+          <!-- section, article, aside tags d -->
+          <section>
+              education: CS degree | BTech
+          </section>
+          <section>
+              experience: Thoughtworks | Everest Engineering
+          </section>
+          <article>My story</article>
+          <a href="https://google.com" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                  alt="Coding illustration" height="50" width="50">
+          </a>
+          <aside> Advertising</aside>
+          <!--   div  - a container for html elements - <div> - for grouping things (contain for other tags) (div is a block level element) (takes full width)-->
+          <div style="background-color: lightblue;">
+              <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi voluptate ut odit reiciendis molestias
+                  suscipit accusantium aliquam perspiciatis eligendi. Consectetur similique soluta libero adipisci
+                  repudiandae enim nulla reiciendis tenetur officia.
+              </p>
+              <p>namaste</p>
+              <p>hi</p>
+          </div>
+          <div style="background-color: lightgreen;">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, accusantium.</p>
+              <p>sample text paragh.</p>
+          </div>
+          <!-- Span is inline element, needs to have inline elements -->
+          <span style="background-color: red">
+              lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Lorem ipsum dolor sit amet
+          </span>
+          <lists: ordered and unordered lists>
+              <ul>
+                  <li> orange</li>
+                  <ul>
+                      <li> color: orange</li>
+                      <li> season: summer</li>
+                  </ul>
+                  <li> apple</li>
+                  <ul>
+                      <li> color: red</li>
+                      <li> season: winter</li>
+                  </ul>
+                  <li> banana</li>
+                  <ul>
+                      <li> color: yellow</li>
+                      <li> season: summer</li>
+                  </ul>
+              </ul>
+              <ol>
+                  <li> orange</li>
+                  <ol>
+                      <li> color: orange</li>
+                      <li> season: summer</li>
+                      <ol>
+                          <li> apple</li>
+                          <ol>
+                              <li> color: red</li>
+                              <li> season: winter</li>
+                          </ol>
+                          <li> banana</li>
+                          <ol>
+                              <li> color: yellow</li>
+                              <li> season: summer</li>
+                          </ol>
+                      </ol>
+                      <!-- tables: table row(tr), table date(td), table header(th) . Table head(thead)), Table body(tbody)-->
+                      <table>
+                          <thead>
+                              <caption>
+                                  Student details
+                              </caption>
+                              <tr>
+                                  <th colspan="2">
+                                      Student details information
+                                  </th>
+                              </tr>
+                              <tr>
+                                  <th>
+                                      Name
+                                  </th>
+                                  <th>
+                                      Roll No
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <th>
+                                      Hemil
+                                  </th>
+                                  <th>
+                                      88
+                                  </th>
+                              <tr>
+                                  <th>
+                                      John
+                                  </th>
+                                  <th>
+                                      89
+                                  </th>
+                              </tr>
+                              <tr>
+                                  <th>
+                                      Joe
+                                  </th>
+                                  <th>
+                                      90
+                                  </th>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <!-- forms in html. Forms used to collect data.-->
+                      <!-- Action attribute used to define where form will go    <form action="/action.php">-->
+                      <!-- Input form element -->
+                      <!-- label is assign tag -->
+                      <h5> Enter your details</h5>
+                      <form action="/action.php">
+                          <input type="text" placeholder="Enter your name">
+                          <br>
+                          <input type="password" placeholder="Enter your password">
+                          <br>
+                          <!-- value sent to backend -->
+                          <!-- label, id helps for dynamic button selections-->
+                          <label for="101">
+                              <input type="radio" value="class XI" name="class" id="101"> cla̦ss XI
+                              <br>
+                          </label>
+                          <label for="102">
+                              <input type="radio" value="class XII" name="class" id="102"> class XII
+                          </label>
+                      <h5> Select your subjects</h5>
+                      <!-- checkbox, id is for backend. Class for identify something, ids for internal unique identification something -->
+                      <label for="math">
+                          <input type="checkbox" value="math" name="subject" id="103"> Math
+                      </label>
+                      <label for="english">
+                          <input type="checkbox" value="english" name="subject" id="104"> English
+                      </label>
+                      <label for="science">
+                          <input type="checkbox" value="science" name="subject" id="105"> Science
+                      </label>
+                      <!-- drop down -->
+                      <select name="city">
+                          <option value="pune">Pune</option>
+                          <option value="delhi">Delhi</option>
+                          <option value="bangalore">Bangalore</option>
+                      </select>
+                      <textarea name="feedback" id="106" placeholder="Enter your feedback" cols="30" rows="10"> Enter Feedback
+                      </textarea>
+                  <input type="submit" value="Submit">
+              </form>
+              <!-- iframe is for website, videos run on your webpage -->
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tb8s8AJRZQw?si=nXtJBty07V5dsPuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+              <iframe src="https://www.wikipedia.org/" width="560" height="315"></iframe>
+              <!-- video tag, relative and absolute link   -->
+               <video width="560" height="315" src="/sample.mov" controls>my video</video>
+      </main>
+      <footer>
+          <h5>Created by Hemil Turakhia</h5>
+          <h5>Contact: hemilturakhia@gmail.com</h5>
+      </footer>
+  </body>
+  
+  </html>
